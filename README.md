@@ -60,7 +60,6 @@
 2. Click on `Pick an image` -> `ImagePicker` will open as it should
 3. Click on `Change language` and pick another language
 4. Return to the app and there is an error:
-
    ```
    Looks like you have configured linking in multiple places.
    This is likely an error since deep links should only be handled in one place to avoid conflicts.
@@ -72,12 +71,16 @@
 5. Ignore this error and click on `Pick an image` -> `ImagePicker` doesn't open and there is an error
 
    ```
+
    Uncaught (in promise, id: 0) Error: Call to function 'ExponentImagePicker.launchImageLibraryAsync' has been rejected.
    → Caused by: java.lang.IllegalStateException: Attempting to launch an unregistered ActivityResultLauncher
    with contract expo.modules.imagepicker.contracts.ImageLibraryContract@670bf83 and
    input ImageLibraryContractOptions(options=expo.modules.imagepicker.ImagePickerOptions@aada500).
    You must ensure the ActivityResultLauncher is registered before calling launch()
    ```
+<img width="300" alt="Screenshot_1764155841" src="https://github.com/user-attachments/assets/1a1fc6fc-3bb9-475c-b2f0-f738ab1dd75e" />
+<img width="300" alt="Screenshot_1764155845" src="https://github.com/user-attachments/assets/87b3b5e5-dcd0-424b-8259-be18ae30260b" />
+
 # Notes
 
 This issue is only on Android and app needs full restart to function properly again until the next language change.
